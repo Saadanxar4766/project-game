@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        #result{
+            font-size: 30px;
+            text-decoration: underline;
+        }
+        .main{
+            background-color: lightsteelblue;
+            width: 20%;
+            padding: 25px;
+            border: 5px solid steelblue;
+            margin-top: 20%;
+            margin-left: 35%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main" >
+        <input id="usernum" type="number" value="0"><br><br>
+        <input type="button" value="Test" onclick="test()">
+        <input type="button" value="Reset" onclick="reset()"><br><br>
+        <span id="result">Enter an integer number</span>
+    </div>
+    
+    <script >
+        function test(){
+            let num = Number(document.getElementById("usernum").value)
+            if(num % 2 ==0){
+                document.getElementById("result").innerText = num +  "is even number"
+            }else{
+                document.getElementById("result").innerText = num +  "is odd number"
+            }
+        }
+        function reset(){
+            document.getElementById("usernum").value  = "0"
+            document.getElementById("result").innerText = "Enter an integer number"
+        }
+    </script>
+</body>
+</html>
